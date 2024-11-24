@@ -73,10 +73,9 @@
                 }
             }, 100);
 
-            // Dynamically set the key
+            // Dynamically set the key from localStorage
             function setKey() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const key = urlParams.get('key'); // Extract the 'key' from query params
+                const key = localStorage.getItem('key'); // Retrieve key from localStorage
                 if (key) {
                     document.getElementById('code').innerText = key; // Display the key
                 } else {
